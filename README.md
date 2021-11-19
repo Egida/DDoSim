@@ -1,3 +1,4 @@
-# IoTDDoS: Large-Scale Memory Error Exploits in IoT
+# MEDDoS
+A Framework for Exploring Large-Scale Memory ErrorExploits in IoT
 
-The code will be published once the paper is accepted.
+![Based on the repository from: NS3 Docker Emulator Schema](https://github.com/chepeftw/NS3DockerEmulator/
