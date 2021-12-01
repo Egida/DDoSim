@@ -4,7 +4,7 @@
 
 >**Note:** - The steps are verified on Ubuntu version 20.04 and Debian 11
 
-1. Download “MEDDoS” Project from “sridhar-research-lab” :https://anonymous.4open.science/r/MEDDoS
+1. Download “MEDDoS” Project from: https://anonymous.4open.science/r/MEDDoS
 
 2. In MEDDoS Directory, change the permission of the files as below: ``` sudo chmod +x -R * ```
 
@@ -60,7 +60,7 @@
   
 2. To perform the DDoS attack, make sure that you have the entire nodes connected to the C&C server (you can see the total number of bots in the title bar of the C&C server). Type the following command in the C&C server terminal:
     
-    ``` udpplain <TargetServer_IP> <duration_of_attack_in_sec> <port_selection> ```
+    ``` udpplain <TargetServer_IP> <duration_of_attack_in_sec> <options> ```
 
     ``` ex: udpplain 10.0.0.4 100 dport=9 ```
 
