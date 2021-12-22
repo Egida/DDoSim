@@ -12,9 +12,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -q -y --no-
 
 WORKDIR /
 
-RUN echo "deb http://dk.archive.ubuntu.com/ubuntu/ xenial main" | tee -a /etc/apt/sources.list
-RUN echo "deb http://dk.archive.ubuntu.com/ubuntu/ xenial universe" | tee -a /etc/apt/sources.list
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553 7638D0442B90D010 CBF8D6FD518E17E1
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial main" | tee -a /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial universe" | tee -a /etc/apt/sources.list
+# RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553 7638D0442B90D010 CBF8D6FD518E17E1
 
 RUN DEBIAN_FRONTEND=noninteractive add-apt-repository 'deb http://archive.ubuntu.com/ubuntu trusty universe' && apt-get update
 
