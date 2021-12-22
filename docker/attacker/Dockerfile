@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
-COPY sources.list /etc/apt/
+# COPY sources.list /etc/apt/
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y apt-transport-https
 
