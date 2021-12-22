@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND noninteractive
 RUN echo "resolvconf resolvconf/linkify-resolvconf boolean false" | debconf-set-selections
 
-COPY sources.list /etc/apt/
+# COPY sources.list /etc/apt/
 
 RUN apt-get update && apt-get install -y apt-transport-https
 
