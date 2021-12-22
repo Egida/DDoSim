@@ -9,9 +9,9 @@ RUN apt-get update && apt-get install -y apt-transport-https
 
 RUN apt-get update && apt-get install -q -y --no-install-recommends dialog debconf-utils apt-utils apt-file pciutils software-properties-common wget curl git gcc g++ make gnupg nano unzip libbz2-dev aptitude net-tools dnsutils ifupdown procps glib2.0 iputils-ping telnet gdb
 
-RUN echo "deb http://dk.archive.ubuntu.com/ubuntu/ xenial main" | tee -a /etc/apt/sources.list
-RUN echo "deb http://dk.archive.ubuntu.com/ubuntu/ xenial universe" | tee -a /etc/apt/sources.list
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553 7638D0442B90D010 CBF8D6FD518E17E1
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial main" | tee -a /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial universe" | tee -a /etc/apt/sources.list
+# RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553 7638D0442B90D010 CBF8D6FD518E17E1
 RUN apt-get update && apt-get install gcc-4.9 g++-4.9 -y
 
 # if "glib2.0" is added here, it will cause lots of errors
