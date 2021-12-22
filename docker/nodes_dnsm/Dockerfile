@@ -10,9 +10,9 @@ RUN apt-get update
 
 RUN apt-get update && apt-get install -q -y --no-install-recommends dialog debconf-utils apt-utils apt-file pciutils software-properties-common nano curl gcc g++ gdb unzip libbz2-dev aptitude dnsutils ifupdown procps iputils-ping telnet wget git make gnupg  python3 net-tools
 
-RUN echo "deb http://dk.archive.ubuntu.com/ubuntu/ xenial main" | tee -a /etc/apt/sources.list
-RUN echo "deb http://dk.archive.ubuntu.com/ubuntu/ xenial universe" | tee -a /etc/apt/sources.list
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553 7638D0442B90D010 CBF8D6FD518E17E1
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial main" | tee -a /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ xenial universe" | tee -a /etc/apt/sources.list
+# RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553 7638D0442B90D010 CBF8D6FD518E17E1
 RUN apt-get update && apt-get install gcc-4.9 -y
 
 RUN wget https://thekelleys.org.uk/dnsmasq/dnsmasq-2.77.tar.gz
