@@ -1,4 +1,4 @@
-# MEDDoS Instructions
+# MEDDoS
 
 ## **Initial Setup:**
 
@@ -22,28 +22,28 @@
 
 1. To check all the options available use command:
 
-    ``` python3 main.py --help ```
+    ``` ./main.py --help ```
 
 2. To Create number of nodes, use command:
 
-    ``` python3 main.py -n <nodes> create ```
+    ``` ./main.py -n <nodes> create ```
 
-    ``` ex: python3 main.py -n 3 create ```
+    ``` e.g.,: ./main.py -n 3 create ```
     
 
 3. To add the nodes to the NS3 network simulator, use command (the default simulation time is 600secs however it can be changed by using -t option):
 
-    ``` python3 main.py -n <nodes> ns3 ```
+    ``` ./main.py -n <nodes> ns3 ```
 
-    ``` ex: python3 main.py -n 3 ns3 ```
+    ``` e.g.,: ./main.py -n 3 ns3 ```
     
     This will create the N Docker containers, bridges and tap interfaces, and will configure everything. Then it will start the NS3 process.
 
 4. To emulate the created nodes, use command:
 
-    ``` python3 main.py -n <nodes> emulation ```
+    ``` ./main.py -n <nodes> emulation ```
 
-    ``` ex: python3 main.py -n 3 emulation ```
+    ``` e.g.,: ./main.py -n 3 emulation ```
     
     This is the highly scalable part of the emulation. So what this does, is that it restarts the containers and makes sure everything is in place. By doing this, it restarts       the app you are running inside the containers, allowing you to run a test. Then without destroying everything you just reinvoke the same command to start again.
     
@@ -51,24 +51,25 @@
 
 1. Open a new terminal and log into the attacker node the Command & Control server machine which controls bots.
 
-    ``` docker exec-it emu1 bash ```
+    ``` docker exec -it emu1 bash ```
 
     ``` telnet 10.0.0.1 ```
 
     Username: root
+
     Password: root
   
 2. To perform the DDoS attack, make sure that you have the entire nodes connected to the C&C server (you can see the total number of bots in the title bar of the C&C server). Type the following command in the C&C server terminal:
     
     ``` udpplain <TargetServer_IP> <duration_of_attack_in_sec> <options> ```
 
-    ``` ex: udpplain 10.0.0.4 100 dport=9 ```
+    ``` e.g.,: udpplain 10.0.0.4 100 dport=9 ```
 
 3. Once the attack is done, the throughput file is created on the desktop with Left column: simulator time (in sec), Right column = throughput (overall received data at a given time).
 
 ## Destroy nodes:
 
-1. Once the nodes are created should be destroyed to create a different number of new nodes, to do so use command:
+1. The created nodes should be destroyed to create a different number of new nodes. To do so use the following command:
 
-    ``` python3 main.py -n <nodes> destroy ```
+    ``` ./main.py -n <nodes> destroy ```
 
