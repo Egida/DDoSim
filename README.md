@@ -4,7 +4,7 @@
 
 >**Note:** - The steps are verified on Ubuntu version 22.04 and Debian 11
 
-1. Download “DDoSim” Project from: https://anonymous.4open.science/r/DDoSim
+1. Download “DDoSim” Project from: https://anonymous.4open.science/r/FFBE/
 
 2. In DDoSim Directory, change the permission of the files as below: ``` sudo chmod +x -R * ```
 
