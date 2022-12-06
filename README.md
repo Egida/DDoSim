@@ -1,4 +1,4 @@
-# MEDDoS
+# DDoSim
 
 ## **Initial Setup:**
 
