@@ -2,13 +2,13 @@
 
 ## **Initial Setup:**
 
->**Note:** - The steps are verified on Ubuntu version 20.04 and Debian 11
+>**Note:** - The steps are verified on Ubuntu version 22.04 and Debian 11
 
-1. Download “MEDDoS” Project from: https://anonymous.4open.science/r/MEDDoS
+1. Download “DDoSim” Project from: https://anonymous.4open.science/r/DDoSim
 
-2. In MEDDoS Directory, change the permission of the files as below: ``` sudo chmod +x -R * ```
+2. In DDoSim Directory, change the permission of the files as below: ``` sudo chmod +x -R * ```
 
-3. Install MEDDoS with below command:
+3. Install DDoSim with below command:
    >**Note:** - Do not use sudo for the install command, it is placed wherever it is needed.
 
     ``` ./install.sh ```     
